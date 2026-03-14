@@ -1,0 +1,229 @@
+.back-button-container {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 1000;
+}
+
+.btn-back {
+    background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.btn-back:hover {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .back-button-container {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    .btn-back {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+        :root {
+            --primary: #2b6cb0;
+            --primary-dark: #2c5282;
+            --accent: #38b2ac;
+            --accent-light: #81e6d9;
+            --neutral-dark: #2d3748;
+            --neutral: #4a5568;
+            --neutral-light: #e2e8f0;
+            --white: #ffffff;
+            --off-white: #f7fafc;
+            --success: #48bb78;
+            --warning: #ed8936;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10z' fill='%232b6cb0' fill-opacity='0.1'/%3E%3Cpath d='M50 20c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20zm0 36c-8.837 0-16-7.163-16-16s7.163-16 16-16 16 7.163 16 16-7.163 16-16 16z' fill='%2338b2ac' fill-opacity='0.05'/%3E%3Cpath d='M73 50c0-12.703-10.297-23-23-23S27 37.297 27 50s10.297 23 23 23 23-10.297 23-23zm-46 0c0-12.703 10.297-23 23-23s23 10.297 23 23-10.297 23-23 23-23-10.297-23-23z' fill='%2381e6d9' fill-opacity='0.03'/%3E%3C/svg%3E");
+            background-size: 300px;
+            background-attachment: fixed;
+        }
+
+        .medical-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px; /* Réduit la largeur maximale */
+            border: none;
+            position: relative;
+        }
+
+        .medical-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 1.5rem; /* Padding réduit */
+            text-align: center;
+            border: none;
+        }
+
+        .card-header h2 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 1.5rem; /* Taille de police réduite */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .medical-icon {
+            font-size: 1.5rem; /* Taille d'icône réduite */
+        }
+
+        .card-body {
+            padding: 2rem; /* Padding réduit */
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--neutral-dark);
+            margin-bottom: 0.5rem; /* Marge réduite */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem; /* Taille de police réduite */
+        }
+
+        .form-control, .form-select {
+            padding: 0.75rem 1rem; /* Padding réduit */
+            border: 2px solid var(--neutral-light);
+            border-radius: var(--radius);
+            font-size: 0.95rem; /* Taille de police réduite */
+            transition: var(--transition);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(43, 108, 176, 0.25);
+        }
+
+        .form-control-lg {
+            padding: 0.875rem 1.25rem; /* Padding réduit */
+            font-size: 1rem; /* Taille de police réduite */
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border: none;
+            padding: 0.875rem 1.75rem; /* Padding réduit */
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-size: 1rem; /* Taille de police réduite */
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px); /* Animation réduite */
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(to right, var(--primary-dark), var(--accent));
+        }
+
+        .alert {
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.875rem 1.25rem; /* Padding réduit */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem; /* Taille de police réduite */
+            margin-bottom: 1.5rem;
+        }
+
+        .medical-decoration {
+            position: absolute;
+            opacity: 0.03;
+            z-index: 0;
+        }
+
+        .decoration-1 {
+            top: 10%;
+            right: 5%;
+            font-size: 6rem; /* Taille réduite */
+            color: var(--primary);
+        }
+
+        .decoration-2 {
+            bottom: 15%;
+            left: 5%;
+            font-size: 4.5rem; /* Taille réduite */
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1.5rem;
+            }
+            
+            .medical-decoration {
+                display: none;
+            }
+            
+            .card-header h2 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            body {
+                padding: 0.5rem;
+            }
+            
+            .card-header {
+                padding: 1.25rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+            
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+            }
+        }

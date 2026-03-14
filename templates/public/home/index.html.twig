@@ -1,0 +1,132 @@
+{% extends 'public/base.html.twig' %}
+
+{% block title %}Accueil - CRIEM{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+     <link rel="stylesheet" href="{{ asset('home.css') }}">
+{% endblock %}
+
+{% block body %}
+     <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+        
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="logo-text">CRIEM</div>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('Accueil') }}" class="nav-link active"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('Apropos') }}" class="nav-link"><i class="fas fa-info-circle"></i> À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('fiche_demande') }}" class="nav-link"><i class="fas fa-file-alt"></i> Fiche de Demande</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('Admin') }}" class="nav-link"><i class="fas fa-user-cog"></i> Administrateur</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Centre des Infrastructures de l'Équipement et de la Maintenance</h1>
+            <p class="hero-subtitle">Expertise technique et maintenance de qualité pour vos infrastructures</p>
+            <a href="{{ path('fiche_demande') }}" class="btn">Faire une demande <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Maintenance Préventive</h3>
+                        <p>Programmes de maintenance régulière pour garantir la longévité et le bon fonctionnement de vos équipements.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Réparation Curative</h3>
+                        <p>Intervention rapide et efficace pour résoudre les pannes et dysfonctionnements de vos services.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Gestion des Demandes</h3>
+                        <p>Suivi et traitement optimisé de toutes vos demandes d'intervention via notre plateforme dédiée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CRIEM</h3>
+                    <p>Le Centre des Infrastructures de l'Équipement et de la Maintenance offre des services techniques de haute qualité pour la gestion et l'entretien des structures sanitaires.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ path('Accueil') }}">Accueil</a></li>
+                        <li><a href="{{ path('Apropos') }}">À propos</a></li>
+                        <li><a href="{{ path('fiche_demande') }}">Fiche de Demande</a></li>
+                        <li><a href="{{ path('Admin') }}">Administrateur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>Sous-sol du CHR de Yamoussoukro</p>
+                    <p><i class="fas fa-phone"></i>TEL:+255 07-08-12-17-37 </p>
+                    <p><i class="fas fa-envelope"></i> criemyakro01@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CRIEM - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('home.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'public/base.html.twig' %}
+
+{% block title %}Administrateur-CRIEM{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Admin.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <title>Connexion Administrateur</title>
+    <!-- Bouton Retour en haut à gauche -->
+    <div class="back-button-container">
+        <a href="{{path('Accueil')}}" class="btn-back">
+            <i class="bi bi-arrow-left me-1"></i>Retour
+        </a>
+    </div>
+
+    <div class="admin-card">
+        <div class="card-header">
+            <h2><i class="bi bi-shield-lock admin-icon"></i>Espace Administrateur</h2>
+        </div>
+        <div class="card-body position-relative">
+            <!-- Éléments de décoration -->
+            <i class="bi bi-key admin-decoration decoration-1"></i>
+            <i class="bi bi-person-badge admin-decoration decoration-2"></i>
+            
+            <!-- Messages flash (exemple) -->
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>Email ou mot de passe incorrect
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <!-- Formulaire de connexion -->
+            <form method="post" class="needs-validation" novalidate>
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="form-label">
+                        <i class="bi bi-envelope"></i>Adresse Email
+                    </label>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" 
+                           placeholder="votre@email.com" required>
+                    <div class="invalid-feedback">Veuillez saisir une adresse email valide.</div>
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="mb-4">
+                    <label for="password" class="form-label">
+                        <i class="bi bi-lock"></i>Mot de passe
+                    </label>
+                    <input type="password" class="form-control form-control-lg" id="password" name="password" 
+                           placeholder="Votre mot de passe" required>
+                    <div class="invalid-feedback">Veuillez saisir votre mot de passe.</div>
+                </div>
+
+                <!-- Bouton de connexion -->
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg py-2">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Se connecter
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+      
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('Admin.js') }}"></script>
+{% endblock %}

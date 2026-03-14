@@ -1,0 +1,188 @@
+{% extends 'public/base.html.twig' %}
+
+{% block title %}Apropos - CRIEM{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Apropos.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="logo-text">CRIEM</div>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="{{ path('Accueil') }}" class="nav-link"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('Apropos') }}" class="nav-link active"><i class="fas fa-info-circle"></i> À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('fiche_demande') }}" class="nav-link"><i class="fas fa-file-alt"></i> Fiche de Demande</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('Admin') }}" class="nav-link"><i class="fas fa-user-cog"></i> Administrateur</a>
+                    </li>
+                </ul>
+                
+                <button class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container about-hero-content">
+            <h1 class="about-hero-title">À Propos du CRIEM Yamoussoukro</h1>
+            <p class="about-hero-subtitle">Découvrez notre mission, notre équipe et notre engagement pour la maintenance des infrastructures sanitaires</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <h2 class="section-title">Notre Mission</h2>
+            <p class="section-subtitle">Le Centre Régional des Infrastructures, de l'Équipement et de la Maintenance (CRIEM) de Yamoussoukro œuvre depuis 2002 pour assurer la maintenance des infrastructures sanitaires de la région</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3 class="about-card-title"><i class="fas fa-map-marker-alt"></i> Zone d'Intervention</h3>
+                    <p>Le CRIEM de Yamoussoukro couvre la zone 5 qui comprend les districts sanitaires de Yamoussoukro, Tiébissou, Didievi, Toumodi, Dimbokro, Kouassi-Kouassikro et Bocanda.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3 class="about-card-title"><i class="fas fa-cogs"></i> Domaines d'Activité</h3>
+                    <p>Nos interventions couvrent trois domaines principaux : le génie biomédical, le génie technique et le génie infrastructure pour assurer le bon fonctionnement des établissements de santé.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h3 class="about-card-title"><i class="fas fa-chart-line"></i> Impact 2024</h3>
+                    <p>En 2024, nous avons réalisé 2,430 interventions techniques dont 72% de maintenance préventive, 22% de maintenance curative et 6% d'installations nouvelles.</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Chiffres clés de l'année 2024</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2,430</div>
+                    <div class="stat-label">Interventions réalisées</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">61.5%</div>
+                    <div class="stat-label">Génie infrastructure</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">21.4%</div>
+                    <div class="stat-label">Génie technique</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">17.1%</div>
+                    <div class="stat-label">Génie biomédical</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Notre Équipe</h2>
+            <p class="section-subtitle">Une équipe de professionnels dévoués à votre service</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">KOUADIO Bindé Innocent A.</h3>
+                        <p class="team-role">Ingénieur des Services de Santé - Chef du CRIEM</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">AKA Koua Ehoussou J.-J.</h3>
+                        <p class="team-role">Technicien Supérieur Biomédical Adjoint</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">KONAN N'dri Jean-Louis</h3>
+                        <p class="team-role">Ingénieur des Techniques Sanitaires</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">Équipe Technique</h3>
+                        <p class="team-role">20 agents spécialisés en maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <h3>CRIEM Yamoussoukro</h3>
+                    <p>Le Centre des Infrastructures de l'Équipement et de la Maintenance offre des services techniques de haute qualité pour la gestion et l'entretien des infrastructures biomédicales.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ path('Accueil') }}"><i class="fas fa-home"></i> Accueil</a></li>
+                        <li><a href="{{ path('Apropos') }}"><i class="fas fa-info-circle"></i> À propos</a></li>
+                        <li><a href="{{ path('fiche_demande') }}"><i class="fas fa-file-alt"></i> Fiche de Demande</a></li>
+                        <li><a href={{ path('Admin') }}><i class="fas fa-user-cog"></i> Administrateur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sous-sol du CHR de Yamoussoukro</p>
+                    <p><i class="fas fa-phone"></i> TEL:+255 07-08-12-17-37 </p>
+                    <p><i class="fas fa-envelope"></i> criemyakro01@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Lun-Ven: 8h-17h00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CRIEM Yamoussoukro - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('Apropos.js') }}"></script>
+{% endblock %}
